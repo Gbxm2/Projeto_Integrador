@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="teladeporudotos.css">
+    <link rel="icon" type="image/png" href="C:\Users\gaabr\OneDrive\Área de Trabalho\Xampp\WWW2\Projeto\Icons\leaf.png">
+
+</head>
+<body>
+
+    <header class="top-header">
+        <a href="teladeprodutos.html"><img src="Logo.png" alt="Logo" class="logo"></a>
+        <nav>
+            <div class="alinhamento">
+            <ul>
+                <li><a href="teladeprodutos.html">Início</a></li>
+                <li><a href="teladeprodutos.html">Produtos</a></li>
+                
+            </ul>
+            </div>
+        </nav>
+       
+    </header>
+
+    <section class="banner">
+        <h1>Seu Carrinho</h1>
+        <p>Confira os produtos que você selecionou!</p>
+    </section>
+
+    
+    <section class="products-grid carrinho-container">
+       
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Sua Loja. Todos os direitos reservados.</p>
+        <img src="leaf.png" alt="Footer Image" class="footer-image">
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const carrinhoContainer = document.querySelector('.carrinho-container');
+        let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+        function desenharCarrinho() {
+            carrinhoContainer.innerHTML = '';
+
+            if (carrinho.length === 0) {
+                carrinhoContainer.innerHTML = '<p style="grid-column: 1 / -1; text-align: center;">Seu carrinho está vazio!</p>';
+                return;
+            }
+
+            carrinho.forEach((produto, index) => {
+                const itemDiv = document.createElement('div');
+                itemDiv.classList.add('product-card');
+                itemDiv.innerHTML = `
+                    <img src="${produto.imagem}" alt="${produto.nome}">
+                    <h2>${produto.nome}</h2>
+                    <p>${produto.preco}</p>
+                    <button class="remover" data-index="${index}">Remover</button>
+                `;
+                carrinhoContainer.appendChild(itemDiv);
+            });
+
+       
+            const botoesRemover = document.querySelectorAll('.remover');
+            botoesRemover.forEach(botao => {
+                botao.addEventListener('click', (e) => {
+                    const index = e.target.getAttribute('data-index');
+                    carrinho.splice(index, 1);
+                    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+                    desenharCarrinho();
+                });
+            });
+        }
+
+        desenharCarrinho();
+    });
+    </script>
+
+</body>
+</html>
