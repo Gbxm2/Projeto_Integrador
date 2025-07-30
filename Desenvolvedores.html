@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="teladeporudotos.css">
+    <link rel="icon" type="image/png" href="C:\Users\gaabr\OneDrive\Área de Trabalho\Xampp\WWW2\Projeto\Icons\leaf.png">
+
+</head>
+<body>
+
+    <style>
+
+      
+
+        .footer{
+            top:500px;
+        }
+.integrantes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .integrantes-card {
+            width: 100%;
+            perspective: 1000px;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+
+        .integrantes-card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border: 2px solid #a5d6a7;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+        }
+
+        .card-front {
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-front img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-back {
+            background-color: #e0f2f1;
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            font-family: Arial, sans-serif;
+            color: #2e7d32;
+        }
+
+
+
+    </style>
+    <header class="top-header">
+        <a href="teladeprodutos.html"><img src="Logo.png" alt="Logo" class="logo"></a>
+        
+           <div class = "alinhamento">
+          <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="teladeprodutos.html">Produtos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="desenvolvedores.html">Desenvolvedores</a></li>
+                <li><a href="index.html">Login</a></li>
+            </ul>
+        </nav>
+        </div>
+        
+       
+    </header>
+
+    <section class="banner">
+        <h1>Projeto Integrador - UNISO</h1>
+        <h2>ecochic@gmail.com</h2>
+        <br>
+        <h3>Fábio Akira | Fabio Pelissari | Gabriel José | Gustavo Felix | Pedro Casaburi </h3>
+       
+        
+    </section>
+<main class="integrantes-grid">
+        <div class="integrantes-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="C:\Users\gaabr\OneDrive\Área de Trabalho\Xampp\WWW2\Projeto\Icons\Fabio_Akira.jpg" alt="Integrante 1">
+                </div>
+                <div class="card-back">
+                    <h3>Fábio Akira</h3>
+                    <h3>Makimura Abreu</h3>
+                    <br>
+                    <p>Banco de Dados</p>
+                    <br>
+                    <p><b>Email:</b></p>
+                    <p>fabio.akira@email.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="integrantes-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="C:\Users\gaabr\OneDrive\Área de Trabalho\Xampp\WWW2\Projeto\Icons\Fabio_Pelissari.jpg" alt="Fabio Pelissari">
+                </div>
+                <div class="card-back">
+                    <h3>Fabio Augusto de </h3>
+                    <h3>Oliveira Pelissari</h3>
+                    <br>
+                    <p>Lider do Projeto e </p>
+                    <p>Documentação</p>
+                    <br>
+                    <p><b>Email:</b></p>
+                    <p>fabio_1418.12@hotmail.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="integrantes-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="C:\Users\gaabr\OneDrive\Área de Trabalho\Xampp\WWW2\Projeto\Icons\Gabriel.jpeg" alt="Integrante 3">
+                </div>
+                <div class="card-back">
+                    <h3>Gabriel José Oliveira</h3>
+                    <h3>de Araújo</h3>
+                    <br>
+                    <p>UX/UI Designer</p>
+                    <p>Desenvolvedor Front-End</p>
+                    <br>
+                    <p><b>Email:</b></p> 
+                    <p>gaabriel.araujo64@gmail.com </p>
+                    <br>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="integrantes-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="C:\Users\gaabr\OneDrive\Área de Trabalho\Xampp\WWW2\Projeto\Icons\Gustavo_Felix.jpg" alt="Integrante 4">
+                </div>
+                <div class="card-back">
+                    <h3>Gustavo Guazzelli Felix </h3>
+                    <br>
+                    <p>Desenvolvedor Front-End</p>
+                    <br>
+                    <p><b>Email:</b></p>
+                    <p>gustavo.felix@email.com</p>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="integrantes-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="C:\Users\gaabr\OneDrive\Área de Trabalho\Xampp\WWW2\Projeto\Icons\Pedro_Casaburi.jpeg" alt="Integrante 4">
+                </div>
+                <div class="card-back">
+                    <h3>Pedro Henrique </h3>
+                    <h3>Martins Casaburi</h3>
+                    <br>
+                    <p>Banco de Dados</p>
+                    <br>
+                    <p><b>Email:</b></p>
+                    <p>00110767@aluno.uniso.br</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section style="padding: 2rem; text-align: center; font-family: Arial, sans-serif; color: #2e7d32;">
+  <h2>Agradecimentos</h2>
+  <p>Gostaríamos de expressar nossa sincera gratidão à <strong>Universidade de Sorocaba – UNISO</strong> por nos proporcionar a estrutura, os recursos e o suporte necessário para o desenvolvimento deste projeto. Através das aulas, das atividades práticas e do ambiente colaborativo, pudemos colocar em prática os conhecimentos adquiridos ao longo da graduação.</p>
+  <br>
+  <p>Estendemos nossos agradecimentos a <strong>todos os professores</strong> envolvidos direta ou indiretamente, que contribuíram com orientações, feedbacks e incentivo. Sem o comprometimento e dedicação de cada um, este trabalho não teria alcançado a qualidade e a maturidade que hoje apresentamos.</p>
+  <br>
+  <p>Este projeto representa não apenas o resultado de um semestre de estudos, mas o reflexo de uma formação sólida, ética e comprometida com o futuro.</p>
+  <br>
+  <br>
+<img src="C:\Users\gaabr\OneDrive\Área de Trabalho\Xampp\WWW2\Projeto\Icons\uniso.png" width="250px">
+</section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Sua Loja. Todos os direitos reservados.</p>
+        <img src="leaf.png" alt="Footer Image" class="footer-image">
+    </footer>
+
+ 
+</body>
+</html>
